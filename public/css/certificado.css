@@ -1,0 +1,183 @@
+/* CSS Document */
+
+/* base */
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+div.certificado p strong,
+div.info p strong {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* main */
+div.certificado {
+    background-image: url('../img/certificado/fundo_lateral.png');
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    height: 900px;
+    left: 0;
+    padding-left: 302px;
+    padding-right: 2cm;
+    position: absolute;
+    top: 0;
+    width: 820px;
+
+    page-break-after: always;
+}
+div.certificado h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Open Sans", sans-serif;
+    padding-right: 7px;
+    padding-top: 4px;
+    text-align: right;
+}
+div.certificado h2 {
+    color: #af1313;
+    display: inline-block;
+    margin: 10px 3px;
+}
+div.certificado h3 {
+    color: #af1313;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+    padding-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+}
+div.certificado h3 + p {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 2cm 10px 10px;
+    text-align: center;
+}
+div.certificado .caixaENAP {
+    background-color: #af1313;
+    display: inline-block;
+    height: 45px;
+    margin-top: 30px;
+    width: 120px;
+}
+div.certificado .assinatura {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+div.certificado .assinatura hr {
+    margin: -30px auto 0;
+    width: 500px;
+}
+div.certificado .assinatura p {
+    padding-top: -5px;
+    margin: 0px;
+    margin-top: -15px;
+}
+div.certificado .assinatura p + p {
+    margin-top: 0;
+    padding-top: 0;
+}
+div.certificado .rodaPeLogoBrasil {
+    text-align: center;
+    width: 100%;
+}
+
+/* section */
+div.info {
+    left: 2cm;
+    position: absolute;
+    right: 2cm;
+    top: 2cm;
+    width: 964px;
+}
+div.info h3,
+div.info h4 {
+    color: #37474f;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width: 964px;
+}
+div.info h3 {
+    border-bottom: 1px solid #bdc3c7;
+    font-size: 22pt;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+div.info h4 {
+    margin-top: 20px;
+}
+div.info table {
+    border-spacing: 0;
+    font-size: 11pt;
+    width: 100%;
+}
+    div.info table.with-borders {
+        margin-top: 15px;
+    }
+div.info table td,
+div.info table th {
+    padding: 3px 0;
+}
+    div.info table.with-borders td,
+    div.info table.with-borders th {
+        padding: 5px 10px;
+    }
+    div.info table.with-borders td {
+        border: 1px solid #bdc3c7;
+    }
+div.info table th {
+    color: #37474f;
+    font-family: "Roboto", sans-serif;
+}
+div.info table strong {
+    color: #37474f;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+/* footer */
+div.rodape {
+    border-top: 1px solid #bdc3c7;
+    bottom: 2cm;
+    left: 2cm;
+    margin-top: .5cm;
+    padding-top: .5cm;
+    position: absolute;
+    right: 2cm;
+}
+div.rodape p {
+    font-size: 14px;
+    padding-bottom: 6px;
+}
+div.rodape table {
+    border: 0 none;
+    border-spacing: 0;
+}
+div.rodape .obs {
+    padding-right: 20px;
+    width: 66%;
+}
+div.rodape .obs a {
+    color: #337ca0;
+}
+div.rodape .obs p {
+    font-size: 10pt;
+}
+div.rodape .obs strong {
+    color: #37474f;
+}

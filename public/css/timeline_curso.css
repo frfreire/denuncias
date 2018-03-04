@@ -1,0 +1,49 @@
+
+.timeline {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    width: 100%;
+}
+.timeline:before {
+    background: #ff5722;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+.timeline > div {
+    float: left;
+    margin: 20px 60px 20px 0;
+}
+.timeline .title {
+    font-size: 100%;
+}
+.timeline .title h3 {
+    color: rgba(55, 71, 79, 0.75);
+    font-size: 100%;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+}
+.timeline .title h3:before {
+    background: #fff;
+    border: 3px solid #ff5722;
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: -27px;
+    width: 15px;
+}
+.timeline .title h4 {
+    font-size: 130%;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.timeline .description {
+    line-height: 20px;
+    margin-top: 5px;
+}
