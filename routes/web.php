@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/teste', 'AjusteCondutaController@index');
+
+Route::get('/ajuste/cadastrar', 'AjusteCondutaController@create');
