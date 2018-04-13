@@ -17,6 +17,7 @@ class AjusteCondutaController extends Controller
     public function __construct(AjusteCondutaService $ajusteCondutaService)
     {
         $this->ajusteCondutaService = $ajusteCondutaService;
+
     }
 
 
@@ -29,19 +30,20 @@ class AjusteCondutaController extends Controller
     {
         return $this->ajusteCondutaService->cadastrarAjusteConduta();
 
+    }
+
+    public function udpadte(){
+
+        return->$this->ajusteCondutaService->atualizarAjusteConduta();
 
     }
 
-   public function udpadte(){
+    public function delete(){
 
-   }
+    }
 
-   public function delete(){
+    public function read(){
 
-   }
-
-   public function read(){
-
-   }
+    }
 
 }

@@ -17,4 +17,10 @@
             return 'Teste Cadastrar Ajuste de Conduta';
         }
 
+        public function atualizarAjusteConduta()
+        {
+            return 'Teste Atualizado';
+        }
+
+
     }
