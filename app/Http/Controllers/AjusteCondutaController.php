@@ -21,29 +21,25 @@ class AjusteCondutaController extends Controller
     }
 
 
-    public function index()
-    {
-        return 'Passou aqui';
-    }
 
     public function create()
     {
         return $this->ajusteCondutaService->cadastrarAjusteConduta();
-
     }
 
-    public function udpadte(){
-
-        return->$this->ajusteCondutaService->atualizarAjusteConduta();
-
+    public function update()
+    {
+        return $this->ajusteCondutaService->atualizarAjusteConduta();
     }
 
-    public function delete(){
-
+    public function delete()
+    {
+        return $this->ajusteCondutaService->removerAjusteConduta();
     }
 
-    public function read(){
-
+    public function read()
+    {
+        return $this->ajusteCondutaService->verAjusteConduta();
     }
 
 }

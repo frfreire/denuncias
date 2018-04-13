@@ -22,5 +22,14 @@
             return 'Teste Atualizado';
         }
 
+        public function removerAjusteConduta()
+        {
+            return 'Teste Removido';
+        }
+
+        public function verAjusteConduta()
+        {
+            return 'Teste Visualizado';
+        }
 
     }
