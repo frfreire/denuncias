@@ -9,27 +9,86 @@
     namespace App\Service;
 
 
+    use App\Http\Controllers\EntidadeController;
+    use App\Model\Entidade;
+    use Illuminate\Http\Request;
+
+
     class EntidadeService
     {
+        private $entidade;
+        private $table;
 
-        public function cadastrarEntidade()
+
+        public function __construct(Entidade $entidade)
         {
-            return 'Entidade Cadastrada';
+            $this->entidade = $entidade;
+
+
         }
 
-        public function atualizarEntidade()
+        public function cadastrarEntidade($entidade)
         {
-            return 'Entidade Atualizada';
+
+            return $this->entidade::create(
+                [
+                    'nome' => $entidade->nome,
+                    'cnpj' => $entidade->cnpj,
+                    'tipo' => $entidade->tipo,
+                    'latitude' => $entidade->latitude,
+                    'longitude' => $entidade->longitude,
+                    'status' => $entidade->status,
+                    'entidade_vinculada' => $entidade->entidade_vinculada,
+                    'representante' => $entidade->representante,
+                    'email' => $entidade->email,
+                    'telefone_fixo' => $entidade->telefone_fixo,
+                    'telefone_celular' => $entidade->telefone_celular,
+                    'endereco' => $entidade->endereco
+
+                ]);
         }
 
-        public function removerEntidade()
+        public function atualizarEntidade($request)
         {
-            return 'Entidade Removida';
+
+            $ent = $this->entidade::find($request->id);
+
+
+
+            $ent -> nome = 'nome';
+            $ent -> cnpj = 'cnpj';
+            $ent -> tipo = 'tipo';
+            $ent -> latitude = 'latitude';
+            $ent -> longitude = 'longitude';
+            $ent -> status = 'status';
+            $ent -> entidade_vinculada = 'entidade_vinculada';
+            $ent -> representante = 'representante';
+            $ent -> email = 'email';
+            $ent -> telefone_fixo = 'telefone_fixo';
+            $ent -> telefone_celular = 'telefone_celular';
+            $ent -> endereco = 'endereco';
+
+
+            return $ent->save();
+
+
         }
 
-        public function verEntidade()
+        public function removerEntidade($id)
         {
-            return 'Entidade Visualizada';
+            return $this->entidade = \DB::table('tb_entidade')->delete($id);
+
+        }
+
+        public function verEntidade($entidade)
+        {
+            $this->entidade = \DB::table('tb_entidade')->where('entidade','nome')->get();
+            return 'Teste';
+        }
+
+        public function buscarEntidadePorId($id)
+        {
+            return $this->entidade::find($id);
         }
 
     }
