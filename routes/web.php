@@ -20,8 +20,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/teste', 'AjusteCondutaController@index');
 
+Route::get('/entidade', 'EntidadeController@index') ->name('entidade');
+Route::get('/entidade/show', 'EntidadeController@show') ;
 
 Route::get('/ajuste/cadastrar', 'AjusteCondutaController@create');
 
@@ -32,10 +33,48 @@ Route::get('/ajuste/remover', 'AjusteCondutaController@delete');
 Route::get('/ajuste/ver', 'AjusteCondutaController@read');
 
 
-Route::get('/entidade/cadastrar', 'EntidadeController@create');
+Route::get('/entidade/cadastrar', 'EntidadeController@cadastrar');
 
-Route::get('/entidade/atualizar', 'EntidadeController@update');
+Route::get('/entidade/atualizar/{id}', 'EntidadeController@update');
 
-Route::get('/entidade/remover', 'EntidadeController@delete');
+Route::post('/entidade/gravar', 'EntidadeController@create');
+
+Route::get('/entidade/editar/{id}', 'EntidadeController@editar');
+
+Route::get('/entidade/deletar/{id}', 'EntidadeController@delete');
 
 Route::get('/entidade/ver', 'EntidadeController@read');
+
+
+Route::get('/processo/cadastrar', 'ProcessoController@create');
+
+Route::get('/processo/atualizar', 'ProcessoController@update');
+
+Route::get('/processo/remover', 'ProcessoController@delete');
+
+Route::get('/processo/ver', 'ProcessoController@read');
+
+
+Route::get('/andamento/cadastrar', 'AndamentoController@create');
+
+Route::get('/andamento/atualizar', 'AndamentoController@update');
+
+Route::get('/andamento/remover', 'AndamentoController@delete');
+
+Route::get('/andamento/ver', 'AndamentoController@read');
+
+
+Route::get('/tipoandamento/cadastrar', 'TipoAndamentoController@create');
+
+Route::get('/tipoandamento/atualizar', 'TipoAndamentoController@update');
+
+Route::get('/tipoandamento/remover', 'TipoAndamentoController@delete');
+
+Route::get('/tipoandamento/ver', 'TipoAndamentoController@read');
+
+
+
+
+
+
+
