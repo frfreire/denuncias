@@ -16,7 +16,7 @@ class Entidade extends Migration
             $table->string('latitude');
             $table->string('longitude');
             $table->string('status');
-            $table->string('entidade_vinculada');
+            $table->integer('entidade_vinculada');
             $table->string('representante');
             $table->string('email');
             $table->string('telefone_fixo');

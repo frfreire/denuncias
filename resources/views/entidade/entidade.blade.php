@@ -28,8 +28,8 @@
                         <td><p>{{$e->tipo}}</p></td>
                         <td>
                             <a class="fa fa-fw fa-wrench" id="messagesDropdown" href="/entidade/editar/{{$e->id}}" title="Editar"></a>
-                            <a class="fa fa-search" id="messagesDropdown" href="entidade/visualizar" title="Visualizar"></a>
-                            <a class="fa fa-trash" id="messagesDropdown" href="/entidade/deletar/{{$e->id}}" title="Remover"></a>
+                            <a class="fa fa-search" id="messagesDropdown" href="/entidade/visualizar/{{$e->id}}" title="Visualizar"></a>
+                            <a class="fa fa-trash" id="messagesDropdown" href="/entidade/deletar/{{$e->id}}" title="Remover" onClick="alert('Entidade removida!!')"></a>
                         </td>
                     </tr>
                 </tbody>

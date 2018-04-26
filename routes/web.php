@@ -35,7 +35,7 @@ Route::get('/ajuste/ver', 'AjusteCondutaController@read');
 
 Route::get('/entidade/cadastrar', 'EntidadeController@cadastrar');
 
-Route::get('/entidade/atualizar/{id}', 'EntidadeController@update');
+Route::post('/entidade/atualizar', 'EntidadeController@update');
 
 Route::post('/entidade/gravar', 'EntidadeController@create');
 
@@ -43,7 +43,7 @@ Route::get('/entidade/editar/{id}', 'EntidadeController@editar');
 
 Route::get('/entidade/deletar/{id}', 'EntidadeController@delete');
 
-Route::get('/entidade/ver', 'EntidadeController@read');
+Route::get('/entidade/visualizar/{id}', 'EntidadeController@read');
 
 
 Route::get('/processo/cadastrar', 'ProcessoController@create');

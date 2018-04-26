@@ -38,19 +38,17 @@ class EntidadeController extends Controller
         return view('entidade.editar')->with('entidade',$ent);
     }
 
-    public function update(Request $request,$id)
+    public function update(Request $request)
     {
-
-         $this->entidadeService->atualizarEntidade($request);
-
-
-        return "teste update";
+        
+        $this->entidadeService->atualizarEntidade($request);
+        return redirect()->route('entidade');
     }
 
     public function create(Request $request)
     {
         $this->entidadeService->cadastrarEntidade($request);
-        return view('entidade.cadastrar', compact('$this->entidadeService'));
+        return redirect(route('entidade'));
     }
 
 
@@ -59,17 +57,14 @@ class EntidadeController extends Controller
     public function delete($id)
     {
         $this->entidadeService->removerEntidade($id);
-        return "deletado";
-
-
+        return redirect(route('entidade'));
     }
 
-    public function read(Request $request)
+    public function read($id)
     {
 
-        $ver =  $this->entidadeService->verEntidade($request);
-        return $ver;
-
+        $ver = $this->entidadeService->verEntidade($id);
+        return view('entidade.visualizar') ->with('ver',$ver);
     }
 
     public function show()

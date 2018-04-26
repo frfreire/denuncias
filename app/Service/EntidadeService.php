@@ -53,20 +53,18 @@
 
             $ent = $this->entidade::find($request->id);
 
-
-
-            $ent -> nome = 'nome';
-            $ent -> cnpj = 'cnpj';
-            $ent -> tipo = 'tipo';
-            $ent -> latitude = 'latitude';
-            $ent -> longitude = 'longitude';
-            $ent -> status = 'status';
-            $ent -> entidade_vinculada = 'entidade_vinculada';
-            $ent -> representante = 'representante';
-            $ent -> email = 'email';
-            $ent -> telefone_fixo = 'telefone_fixo';
-            $ent -> telefone_celular = 'telefone_celular';
-            $ent -> endereco = 'endereco';
+            $ent -> nome = $request->nome;
+            $ent -> cnpj = $request->cnpj;
+            $ent -> tipo = $request->tipo;
+            $ent -> latitude = $request->latitude;
+            $ent -> longitude = $request->longitude;
+            $ent -> status = $request->status;
+            $ent -> entidade_vinculada = $request->entidade_vinculada;
+            $ent -> representante = $request->representante;
+            $ent -> email = $request->email;
+            $ent -> telefone_fixo = $request->telefone_fixo;
+            $ent -> telefone_celular = $request->telefone_celular;
+            $ent -> endereco = $request->endereco;
 
 
             return $ent->save();
@@ -76,14 +74,16 @@
 
         public function removerEntidade($id)
         {
-            return $this->entidade = \DB::table('tb_entidade')->delete($id);
+            $this->entidade = \DB::table('tb_entidade')->delete($id);
+            $id = null;
+            return $this->entidade;
 
         }
 
-        public function verEntidade($entidade)
+        public function verEntidade($id)
         {
-            $this->entidade = \DB::table('tb_entidade')->where('entidade','nome')->get();
-            return 'Teste';
+            return $this->entidade = \DB::table('tb_entidade')->where('id',$id)->get();
+
         }
 
         public function buscarEntidadePorId($id)

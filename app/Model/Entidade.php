@@ -8,7 +8,7 @@ class Entidade extends Model
 {
 
     protected  $table = 'tb_entidade';
-    protected  $guarded = ['id'];
+    protected  $guarded = 'id';
     protected $fillable = [
                             'nome',
                             'cnpj',
