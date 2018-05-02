@@ -11,6 +11,9 @@
 |
 */
 
+require 'auth/user.php';
+require 'auth/admin.php';
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -78,3 +81,7 @@ Route::get('/tipoandamento/ver', 'TipoAndamentoController@read');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

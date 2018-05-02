@@ -5,17 +5,18 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class TipoAndamento extends Model
+class Uf extends Model
 {
-    protected $table = 'tb_tipo_andamento';
+    protected $table = 'tb_uf';
 
     protected $primaryKey = 'id';
     protected $fillable = [
-        'tx_nm_providencia'
+        'tx_sg_uf',
+        'tx_nm_uf',
     ];
 
-    public function andamentos():HasMany
+    public function cidades(): HasMany
     {
-        return $this->hasMany(Andamento::class);
+        return $this->hasMany(Cidade::class);
     }
 }

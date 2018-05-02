@@ -3,19 +3,34 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Andamento extends Model
 {
-    private $id;
-    private $id_processo;
-    private $id_tipoAndamento;
+    protected $table = 'tb_andamento';
 
-    public function tiposAndamento():ManyToOne // Muitos andamentos possui um tipo de andamento
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'tx_descricao_andamento',
+        'id_tipo_andamento',
+        'id_denuncia',
+        'id_responsavel',
+        'dt_registro_andamento'
+    ];
+
+    public function tipoAndamento(): BelongsTo
     {
-        return $this->hasMany('App/Model/TipoAndamento');
+        return $this->belongsTo(TipoAndamento::class);
     }
-    public function processo():ManyToOne  //Muitos andamento em um processos
+
+    public function responsavel(): HasOne
     {
-        return $this->hasMany('App/Model/Processo');
+        return $this->hasOne(Responsavel::class);
+    }
+
+    public function denuncia(): HasOne
+    {
+        return $this->hasOne(Denuncia::class);
     }
 }
