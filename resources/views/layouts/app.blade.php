@@ -9,10 +9,13 @@
     <meta name="author" content="">
     <title>SB Admin - Start Bootstrap Template</title>
     <!-- Bootstrap core CSS-->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
+
+
 <!--  <script src=""></script>-->
 <!--     <img alt="logo" src="">-->
 <!--     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
@@ -27,17 +30,31 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="/entidade">Fiscalização</a>
+    <a class="navbar-brand" href="/entidade">Sistema para Gestão de Informações</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cadastrar">
-                <a class="nav-link" href="/entidade/cadastrar">
-                    <i class="fa fa-fw fa-dashboard"></i>
-                    <span class="nav-link-text">Cadastrar</span>
+            {{--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cadastrar">--}}
+                {{--<a class="nav-link" href="/entidade/cadastrar">--}}
+                    {{--<i class="fa fa-fw fa-dashboard"></i>--}}
+                    {{--<span class="nav-link-text">Cadastrar</span>--}}
+                {{--</a>--}}
+            {{--</li>--}}
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Denúncias">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-address-book-o"></i>
+                    <span class="nav-link-text">Denúncias</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                    <li>
+                        <a href="{{ url('denuncia/cadastro') }}">Nova ocorrência</a>
+                    </li>
+                    <li>
+                        <a href="cards.html">Cards</a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Pesquisar">
                 <a class="nav-link" href="/entidade/ver">
@@ -333,7 +350,7 @@
     <footer class="sticky-footer">
         <div class="container">
             <div class="text-center">
-                <small>Copyright Â© Your Website 2018</small>
+                <small>Instituto Nacional de Tecnologia da Informação&copy;</small>
             </div>
         </div>
     </footer>
@@ -359,23 +376,23 @@
             </div>
         </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    </div>
 </div>
 </body>
 
+<!-- Bootstrap core JavaScript-->
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+<script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('vendor/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+<script src="{{ asset('js/sb-admin.min.js') }}"></script>
+<script src="{{ asset('js/sb-admin-datatables.min.js') }}"></script>
+<script src="{{ asset('js/sb-admin-charts.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('vendor/metisMenu/metisMenu.min.js') }}"></script>
+<script src="{{ asset('js/sb-admin-2.js') }}"></script>
 
 </html>
 

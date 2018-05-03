@@ -11,8 +11,6 @@
 |
 */
 
-require 'auth/user.php';
-require 'auth/admin.php';
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/denuncia/cadastro', 'DenunciaController@cadastrar');
+Route::post('/denuncia/salvar', 'DenunciaController@salvar');
 
 
 Route::get('/entidade', 'EntidadeController@index') ->name('entidade');
@@ -75,12 +76,9 @@ Route::get('/tipoandamento/remover', 'TipoAndamentoController@delete');
 
 Route::get('/tipoandamento/ver', 'TipoAndamentoController@read');
 
+Auth::routes();
 
-
-
-
-
-
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

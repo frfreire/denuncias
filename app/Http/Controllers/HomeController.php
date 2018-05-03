@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
+
+    protected $redirectTo = '/';
+
     /**
      * Create a new controller instance.
      *
